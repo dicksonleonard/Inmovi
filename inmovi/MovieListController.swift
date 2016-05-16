@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MovieListController.swift
 //  inmovi
 //
 //  Created by Alfonse MBP 00 on 5/16/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MovieListController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

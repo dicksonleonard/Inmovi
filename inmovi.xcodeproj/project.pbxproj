@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4D9C083E1CE992C3004449FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C083D1CE992C3004449FF /* AppDelegate.swift */; };
-		4D9C08401CE992C3004449FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C083F1CE992C3004449FF /* ViewController.swift */; };
 		4D9C08431CE992C3004449FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C08411CE992C3004449FF /* Main.storyboard */; };
 		4D9C08451CE992C3004449FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C08441CE992C3004449FF /* Assets.xcassets */; };
 		4D9C08481CE992C3004449FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C08461CE992C3004449FF /* LaunchScreen.storyboard */; };
 		4D9C08531CE992C3004449FF /* inmoviTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C08521CE992C3004449FF /* inmoviTests.swift */; };
 		4D9C085E1CE992C3004449FF /* inmoviUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C085D1CE992C3004449FF /* inmoviUITests.swift */; };
+		4D9C08711CE99A5C004449FF /* MovieListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C08701CE99A5C004449FF /* MovieListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		4D9C083A1CE992C3004449FF /* inmovi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inmovi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9C083D1CE992C3004449FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D9C083F1CE992C3004449FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D9C08421CE992C3004449FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D9C08441CE992C3004449FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D9C08471CE992C3004449FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		4D9C08591CE992C3004449FF /* inmoviUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = inmoviUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9C085D1CE992C3004449FF /* inmoviUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inmoviUITests.swift; sourceTree = "<group>"; };
 		4D9C085F1CE992C3004449FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D9C08701CE99A5C004449FF /* MovieListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +97,11 @@
 		4D9C083C1CE992C3004449FF /* inmovi */ = {
 			isa = PBXGroup;
 			children = (
-				4D9C083D1CE992C3004449FF /* AppDelegate.swift */,
-				4D9C083F1CE992C3004449FF /* ViewController.swift */,
-				4D9C08411CE992C3004449FF /* Main.storyboard */,
-				4D9C08441CE992C3004449FF /* Assets.xcassets */,
-				4D9C08461CE992C3004449FF /* LaunchScreen.storyboard */,
-				4D9C08491CE992C3004449FF /* Info.plist */,
+				4D9C086F1CE99831004449FF /* Supporting Files */,
+				4D9C086E1CE997EA004449FF /* Storyboards & Xibs */,
+				4D9C086D1CE99585004449FF /* Controllers */,
+				4D9C086C1CE9937B004449FF /* Other */,
+				4D9C086B1CE99365004449FF /* Assets */,
 			);
 			path = inmovi;
 			sourceTree = "<group>";
@@ -123,6 +122,47 @@
 				4D9C085F1CE992C3004449FF /* Info.plist */,
 			);
 			path = inmoviUITests;
+			sourceTree = "<group>";
+		};
+		4D9C086B1CE99365004449FF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4D9C08441CE992C3004449FF /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		4D9C086C1CE9937B004449FF /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4D9C083D1CE992C3004449FF /* AppDelegate.swift */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		4D9C086D1CE99585004449FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D9C08701CE99A5C004449FF /* MovieListController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4D9C086E1CE997EA004449FF /* Storyboards & Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				4D9C08411CE992C3004449FF /* Main.storyboard */,
+				4D9C08461CE992C3004449FF /* LaunchScreen.storyboard */,
+			);
+			name = "Storyboards & Xibs";
+			sourceTree = "<group>";
+		};
+		4D9C086F1CE99831004449FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D9C08491CE992C3004449FF /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D9C08401CE992C3004449FF /* ViewController.swift in Sources */,
+				4D9C08711CE99A5C004449FF /* MovieListController.swift in Sources */,
 				4D9C083E1CE992C3004449FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -387,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -484,6 +524,7 @@
 				4D9C08641CE992C3004449FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D9C08651CE992C3004449FF /* Build configuration list for PBXNativeTarget "inmoviTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +533,7 @@
 				4D9C08671CE992C3004449FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D9C08681CE992C3004449FF /* Build configuration list for PBXNativeTarget "inmoviUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +542,7 @@
 				4D9C086A1CE992C3004449FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
