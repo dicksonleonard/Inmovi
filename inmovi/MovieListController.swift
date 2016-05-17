@@ -8,18 +8,72 @@
 
 import UIKit
 
-class MovieListController: UIViewController {
+private let reuseIdentifier = "MovieCell"
 
+class MovieListController: UICollectionViewController {
+
+    let inspirations = Inspiration.allInspirations()
+    let colors = UIColor.palette()
+
+    /* Change status bar color to white */
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
 
+extension MovieListController {
+    
+    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return inspirations.count
+    }
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MovieCell
+        
+        cell.inspiration = inspirations[indexPath.item]
+        
+        return cell
+    }
+    
+}
+
+
+// Temporary
+extension UIColor {
+    
+    class func colorFromRGB(r: Int, g: Int, b: Int) -> UIColor {
+        return UIColor(red: CGFloat(Float(r) / 255), green: CGFloat(Float(g) / 255), blue: CGFloat(Float(b) / 255), alpha: 1)
+    }
+    
+    class func palette() -> [UIColor] {
+        let palette = [
+            UIColor.colorFromRGB(85, g: 0, b: 255),
+            UIColor.colorFromRGB(170, g: 0, b: 170),
+            UIColor.colorFromRGB(85, g: 170, b: 85),
+            UIColor.colorFromRGB(0, g: 85, b: 0),
+            UIColor.colorFromRGB(255, g: 170, b: 0),
+            UIColor.colorFromRGB(255, g: 255, b: 0),
+            UIColor.colorFromRGB(255, g: 85, b: 0),
+            UIColor.colorFromRGB(0, g: 85, b: 85),
+            UIColor.colorFromRGB(0, g: 85, b: 255),
+            UIColor.colorFromRGB(170, g: 170, b: 255),
+            UIColor.colorFromRGB(85, g: 0, b: 0),
+            UIColor.colorFromRGB(170, g: 85, b: 85),
+            UIColor.colorFromRGB(170, g: 255, b: 0),
+            UIColor.colorFromRGB(85, g: 170, b: 255),
+            UIColor.colorFromRGB(0, g: 170, b: 170)
+        ]
+        return palette
+    }
+    
+}
