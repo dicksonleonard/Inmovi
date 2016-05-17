@@ -8,14 +8,14 @@
         <!--Movie List Controller-->
         <scene sceneID="BqS-q8-8NH">
             <objects>
-                <collectionViewController id="zq8-HO-1Kj" customClass="MovieListController" customModule="inmovi" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="zq8-HO-1Kj" customClass="MovieListController" customModule="Inmovi" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="z58-vk-xpJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.40907198480000001" blue="0.34842908099999997" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewLayout key="collectionViewLayout" id="Pim-hq-xGN" customClass="MovieTableLayout" customModule="inmovi" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="Pim-hq-xGN" customClass="MovieTableLayout" customModule="Inmovi" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="OOb-DP-Brf" customClass="MovieCell" customModule="inmovi" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="OOb-DP-Brf" customClass="MovieCell" customModule="Inmovi" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">

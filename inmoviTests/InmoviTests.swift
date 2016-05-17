@@ -1,15 +1,15 @@
 //
-//  inmoviTests.swift
-//  inmoviTests
+//  InmoviTests.swift
+//  InmoviTests
 //
-//  Created by Alfonse MBP 00 on 5/16/16.
+//  Created by Alfonse MBP 00 on 5/17/16.
 //  Copyright © 2016 Alvonse. All rights reserved.
 //
 
 import XCTest
-@testable import inmovi
+@testable import Inmovi
 
-class inmoviTests: XCTestCase {
+class InmoviTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

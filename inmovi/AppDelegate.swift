@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  inmovi
+//  Inmovi
 //
-//  Created by Alfonse MBP 00 on 5/16/16.
+//  Created by Alfonse MBP 00 on 5/17/16.
 //  Copyright © 2016 Alvonse. All rights reserved.
 //
 

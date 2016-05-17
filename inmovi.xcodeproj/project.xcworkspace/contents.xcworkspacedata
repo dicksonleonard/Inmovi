@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:inmovi.xcodeproj">
+      location = "self:Inmovi.xcodeproj">
    </FileRef>
 </Workspace>
