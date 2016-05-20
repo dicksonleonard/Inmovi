@@ -14,6 +14,8 @@ class MovieListController: UICollectionViewController {
 
     let inspirations = Inspiration.allInspirations()
     let colors = UIColor.palette()
+    
+    let transitionDelegate: TransitioningDelegate = TransitioningDelegate()
 
     /* Change status bar color to white */
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -23,6 +25,12 @@ class MovieListController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        edgesForExtendedLayout = .None
+        collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        navigationController?.navigationBarHidden = true
     }
     
 }
@@ -45,6 +53,15 @@ extension MovieListController {
         return cell
     }
     
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let detailPageController = storyboard?.instantiateViewControllerWithIdentifier("DetailPageController") as! DetailPageController
+
+        let pageContentController = MovieDetailController()
+        let contentViewControllers = [pageContentController]
+        
+        detailPageController.setViewControllers(contentViewControllers, direction: UIPageViewControllerNavigationDirection .Forward, animated: false, completion: nil)
+        navigationController!.pushViewController(detailPageController, animated: true)
+    }
 }
 
 
