@@ -16,7 +16,7 @@
                         <collectionViewLayout key="collectionViewLayout" id="Pim-hq-xGN" customClass="MovieTableLayout" customModule="Inmovi" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="OOb-DP-Brf" customClass="MovieCell" customModule="Inmovi" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="200" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -85,13 +85,51 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="BDT-Cz-Fsy"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <segue destination="9Pu-Ie-pRe" kind="show" id="HtY-nE-Hea"/>
+                        <segue destination="AAk-ir-7sT" kind="show" id="etz-2B-Tfm"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sSZ-yD-kyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1544" y="221"/>
+            <point key="canvasLocation" x="1532" y="222"/>
+        </scene>
+        <!--Detail Container Controller-->
+        <scene sceneID="RQi-9V-JjS">
+            <objects>
+                <viewController storyboardIdentifier="DetailContainerController" id="AAk-ir-7sT" userLabel="Detail Container Controller" customClass="DetailContainerController" customModule="Inmovi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DhF-LE-vaF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gx8-YF-db7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c23-QE-1JR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRb-9Q-yW4">
+                                <rect key="frame" x="20" y="30" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.72156862749999995" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="LKD-Ha-xtt"/>
+                                    <constraint firstAttribute="height" constant="30" id="U7c-gd-G1q"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="goToPreviousPage:" destination="AAk-ir-7sT" eventType="touchUpInside" id="hrf-Pc-Hfb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DRb-9Q-yW4" firstAttribute="leading" secondItem="c23-QE-1JR" secondAttribute="leading" constant="20" id="O5l-NM-pwE"/>
+                            <constraint firstItem="DRb-9Q-yW4" firstAttribute="top" secondItem="DhF-LE-vaF" secondAttribute="bottom" constant="10" id="gHm-SB-Tf8"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16l-7Z-Mj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2208" y="222"/>
         </scene>
         <!--Detail Page Controller-->
         <scene sceneID="Ual-wI-5KM">
@@ -99,7 +137,7 @@
                 <pageViewController storyboardIdentifier="DetailPageController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="10" navigationOrientation="horizontal" spineLocation="min" id="9Pu-Ie-pRe" customClass="DetailPageController" customModule="Inmovi" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVd-vW-AV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2264" y="221"/>
+            <point key="canvasLocation" x="2840" y="47"/>
         </scene>
         <!--Movie Detail Controller-->
         <scene sceneID="hwa-ns-Fxe">
@@ -117,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnb-aC-RU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2950" y="221"/>
+            <point key="canvasLocation" x="2792" y="725"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Po-ms-3Hx">

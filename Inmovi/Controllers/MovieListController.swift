@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "MovieCell"
 
-class MovieListController: UICollectionViewController {
+class MovieListController: UICollectionViewController, UIGestureRecognizerDelegate {
 
     let inspirations = Inspiration.allInspirations()
     let colors = UIColor.palette()
@@ -31,6 +31,18 @@ class MovieListController: UICollectionViewController {
     
     override func viewWillAppear(animated: Bool) {
         navigationController?.navigationBarHidden = true
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        // Enable swipe back when no navigation bar
+        navigationController?.interactivePopGestureRecognizer!.delegate = self
+    }
+    
+    func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if(navigationController!.viewControllers.count > 1){
+            return true
+        }
+        return false
     }
     
 }
@@ -54,13 +66,8 @@ extension MovieListController {
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let detailPageController = storyboard?.instantiateViewControllerWithIdentifier("DetailPageController") as! DetailPageController
-
-        let pageContentController = MovieDetailController()
-        let contentViewControllers = [pageContentController]
-        
-        detailPageController.setViewControllers(contentViewControllers, direction: UIPageViewControllerNavigationDirection .Forward, animated: false, completion: nil)
-        navigationController!.pushViewController(detailPageController, animated: true)
+        let detailVC = storyboard?.instantiateViewControllerWithIdentifier("DetailContainerController")
+        navigationController!.pushViewController(detailVC!, animated: true)
     }
 }
 

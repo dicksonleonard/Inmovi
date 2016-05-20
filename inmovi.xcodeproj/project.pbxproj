@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D7E7D241CEEC29800BA9028 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E7D211CEEC29800BA9028 /* SnapKit.framework */; };
+		4D7E7D251CEEC29800BA9028 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E7D221CEEC29800BA9028 /* SwiftyJSON.framework */; };
+		4D7E7D271CEEC53300BA9028 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E7D201CEEC29800BA9028 /* Alamofire.framework */; };
+		4D7E7D2B1CEED82A00BA9028 /* DetailContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E7D2A1CEED82A00BA9028 /* DetailContainerController.swift */; };
 		4DA1FF1E1CEC40C600733E41 /* TransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1FF1D1CEC40C600733E41 /* TransitioningDelegate.swift */; };
 		4DA1FF201CEC416300733E41 /* PresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1FF1F1CEC416300733E41 /* PresentationAnimator.swift */; };
 		4DA1FF241CEC418D00733E41 /* DismissalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1FF231CEC418D00733E41 /* DismissalAnimator.swift */; };
@@ -46,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D7E7D201CEEC29800BA9028 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		4D7E7D211CEEC29800BA9028 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		4D7E7D221CEEC29800BA9028 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		4D7E7D2A1CEED82A00BA9028 /* DetailContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailContainerController.swift; path = Controllers/DetailContainerController.swift; sourceTree = "<group>"; };
 		4DA1FF1D1CEC40C600733E41 /* TransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitioningDelegate.swift; path = Views/TransitioningDelegate.swift; sourceTree = "<group>"; };
 		4DA1FF1F1CEC416300733E41 /* PresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresentationAnimator.swift; path = Views/PresentationAnimator.swift; sourceTree = "<group>"; };
 		4DA1FF231CEC418D00733E41 /* DismissalAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DismissalAnimator.swift; path = Views/DismissalAnimator.swift; sourceTree = "<group>"; };
@@ -78,6 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7E7D241CEEC29800BA9028 /* SnapKit.framework in Frameworks */,
+				4D7E7D271CEEC53300BA9028 /* Alamofire.framework in Frameworks */,
+				4D7E7D251CEEC29800BA9028 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +112,9 @@
 		4DD1C6391CEB22580028AE27 = {
 			isa = PBXGroup;
 			children = (
+				4D7E7D201CEEC29800BA9028 /* Alamofire.framework */,
+				4D7E7D211CEEC29800BA9028 /* SnapKit.framework */,
+				4D7E7D221CEEC29800BA9028 /* SwiftyJSON.framework */,
 				4DD1C6441CEB22580028AE27 /* Inmovi */,
 				4DD1C6591CEB22590028AE27 /* InmoviTests */,
 				4DD1C6641CEB22590028AE27 /* InmoviUITests */,
@@ -211,6 +225,7 @@
 				4DD1C67B1CEB291F0028AE27 /* MovieListController.swift */,
 				4DF8F3F61CED8E9800B83898 /* DetailPageController.swift */,
 				4DF8F3F81CED8EB600B83898 /* MovieDetailController.swift */,
+				4D7E7D2A1CEED82A00BA9028 /* DetailContainerController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -243,6 +258,7 @@
 				4DD1C63E1CEB22580028AE27 /* Sources */,
 				4DD1C63F1CEB22580028AE27 /* Frameworks */,
 				4DD1C6401CEB22580028AE27 /* Resources */,
+				4D7E7D261CEEC2BE00BA9028 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -361,6 +377,25 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4D7E7D261CEEC2BE00BA9028 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4DD1C63E1CEB22580028AE27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -376,6 +411,7 @@
 				4DA1FF201CEC416300733E41 /* PresentationAnimator.swift in Sources */,
 				4DD1C6801CEB29590028AE27 /* MovieCell.swift in Sources */,
 				4DF8F3F91CED8EB600B83898 /* MovieDetailController.swift in Sources */,
+				4D7E7D2B1CEED82A00BA9028 /* DetailContainerController.swift in Sources */,
 				4DD1C6461CEB22580028AE27 /* AppDelegate.swift in Sources */,
 				4DD1C6861CEB29770028AE27 /* UIImage+Decompression.swift in Sources */,
 			);
@@ -519,6 +555,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Inmovi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alvonse.Inmovi;
@@ -530,6 +570,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Inmovi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alvonse.Inmovi;

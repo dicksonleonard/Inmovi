@@ -16,10 +16,6 @@ class DetailPageController: UIPageViewController, UIPageViewControllerDelegate, 
         dataSource = self
     }
     
-    override func viewWillAppear(animated: Bool) {
-        navigationController?.navigationBarHidden = false
-    }
-    
 }
 
 extension DetailPageController {
