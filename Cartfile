@@ -1,3 +1,4 @@
 github "Alamofire/Alamofire" ~> 3.4
 github "SwiftyJSON/SwiftyJSON" ~> 2.3.0
 github "SnapKit/SnapKit" >= 0.15.0
+github "realm/realm-cocoa"

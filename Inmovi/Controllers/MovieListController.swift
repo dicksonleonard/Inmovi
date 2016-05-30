@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 private let reuseIdentifier = "MovieCell"
 
@@ -27,6 +29,33 @@ class MovieListController: UICollectionViewController, UIGestureRecognizerDelega
 
         edgesForExtendedLayout = .None
         collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
+
+        Alamofire.request(.GET, "http://eagl.herokuapp.com/movie/json", parameters:nil)
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    if let value = response.result.value {
+                        let json = JSON(value)
+                        print("JSON: \(json)")
+                        
+                        for (index,movieDatum):(String,JSON) in json {
+                            print(index)
+                            
+                            let movie = Movie()
+                            movie.id = movieDatum["id"].string
+                            movie.title = movieDatum["title"].string
+                            movie.summary = movieDatum["content"].string
+                            movie.duration.value = movieDatum["duration"].int
+                            movie.siteURL = movieDatum["url"].string
+                            movie.imageURL = movieDatum["image"].string
+                            movie.createdDate = movieDatum["createdAt"].string
+                            movie.updatedDate = movieDatum["updatedAt"].string
+                        }
+                    }
+                case .Failure(let error):
+                    print(error)
+                }
+        }
     }
     
     override func viewWillAppear(animated: Bool) {

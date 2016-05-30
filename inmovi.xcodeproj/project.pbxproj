@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D7E7D241CEEC29800BA9028 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E7D211CEEC29800BA9028 /* SnapKit.framework */; };
-		4D7E7D251CEEC29800BA9028 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E7D221CEEC29800BA9028 /* SwiftyJSON.framework */; };
-		4D7E7D271CEEC53300BA9028 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E7D201CEEC29800BA9028 /* Alamofire.framework */; };
 		4D7E7D2B1CEED82A00BA9028 /* DetailContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E7D2A1CEED82A00BA9028 /* DetailContainerController.swift */; };
+		4D7E7D2F1CEF1D6C00BA9028 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E7D2C1CEF1D6C00BA9028 /* Alamofire.framework */; };
+		4D7E7D301CEF1D6C00BA9028 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E7D2D1CEF1D6C00BA9028 /* SnapKit.framework */; };
+		4D7E7D311CEF1D6C00BA9028 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E7D2E1CEF1D6C00BA9028 /* SwiftyJSON.framework */; };
+		4D7E7D341CEF1DB700BA9028 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E7D321CEF1DB700BA9028 /* Realm.framework */; };
+		4D7E7D351CEF1DB700BA9028 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E7D321CEF1DB700BA9028 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D7E7D361CEF1DB700BA9028 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E7D331CEF1DB700BA9028 /* RealmSwift.framework */; };
+		4D7E7D371CEF1DB700BA9028 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E7D331CEF1DB700BA9028 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D8D24FF1CFC3488007C828E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D24FE1CFC3488007C828E /* Movie.swift */; };
 		4DA1FF1E1CEC40C600733E41 /* TransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1FF1D1CEC40C600733E41 /* TransitioningDelegate.swift */; };
 		4DA1FF201CEC416300733E41 /* PresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1FF1F1CEC416300733E41 /* PresentationAnimator.swift */; };
 		4DA1FF241CEC418D00733E41 /* DismissalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1FF231CEC418D00733E41 /* DismissalAnimator.swift */; };
@@ -49,11 +54,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4D7E7D381CEF1DB700BA9028 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4D7E7D371CEF1DB700BA9028 /* RealmSwift.framework in Embed Frameworks */,
+				4D7E7D351CEF1DB700BA9028 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		4D7E7D201CEEC29800BA9028 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		4D7E7D211CEEC29800BA9028 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
-		4D7E7D221CEEC29800BA9028 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		4D7E7D2A1CEED82A00BA9028 /* DetailContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailContainerController.swift; path = Controllers/DetailContainerController.swift; sourceTree = "<group>"; };
+		4D7E7D2C1CEF1D6C00BA9028 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		4D7E7D2D1CEF1D6C00BA9028 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		4D7E7D2E1CEF1D6C00BA9028 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		4D7E7D321CEF1DB700BA9028 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		4D7E7D331CEF1DB700BA9028 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		4D8D24FE1CFC3488007C828E /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = Models/Movie.swift; sourceTree = "<group>"; };
 		4DA1FF1D1CEC40C600733E41 /* TransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitioningDelegate.swift; path = Views/TransitioningDelegate.swift; sourceTree = "<group>"; };
 		4DA1FF1F1CEC416300733E41 /* PresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresentationAnimator.swift; path = Views/PresentationAnimator.swift; sourceTree = "<group>"; };
 		4DA1FF231CEC418D00733E41 /* DismissalAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DismissalAnimator.swift; path = Views/DismissalAnimator.swift; sourceTree = "<group>"; };
@@ -86,9 +109,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D7E7D241CEEC29800BA9028 /* SnapKit.framework in Frameworks */,
-				4D7E7D271CEEC53300BA9028 /* Alamofire.framework in Frameworks */,
-				4D7E7D251CEEC29800BA9028 /* SwiftyJSON.framework in Frameworks */,
+				4D7E7D341CEF1DB700BA9028 /* Realm.framework in Frameworks */,
+				4D7E7D361CEF1DB700BA9028 /* RealmSwift.framework in Frameworks */,
+				4D7E7D2F1CEF1D6C00BA9028 /* Alamofire.framework in Frameworks */,
+				4D7E7D301CEF1D6C00BA9028 /* SnapKit.framework in Frameworks */,
+				4D7E7D311CEF1D6C00BA9028 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,13 +137,15 @@
 		4DD1C6391CEB22580028AE27 = {
 			isa = PBXGroup;
 			children = (
-				4D7E7D201CEEC29800BA9028 /* Alamofire.framework */,
-				4D7E7D211CEEC29800BA9028 /* SnapKit.framework */,
-				4D7E7D221CEEC29800BA9028 /* SwiftyJSON.framework */,
 				4DD1C6441CEB22580028AE27 /* Inmovi */,
 				4DD1C6591CEB22590028AE27 /* InmoviTests */,
 				4DD1C6641CEB22590028AE27 /* InmoviUITests */,
 				4DD1C6431CEB22580028AE27 /* Products */,
+				4D7E7D321CEF1DB700BA9028 /* Realm.framework */,
+				4D7E7D331CEF1DB700BA9028 /* RealmSwift.framework */,
+				4D7E7D2C1CEF1D6C00BA9028 /* Alamofire.framework */,
+				4D7E7D2D1CEF1D6C00BA9028 /* SnapKit.framework */,
+				4D7E7D2E1CEF1D6C00BA9028 /* SwiftyJSON.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +206,7 @@
 			children = (
 				4DD1C6811CEB29690028AE27 /* Inspiration.swift */,
 				4DD1C6821CEB29690028AE27 /* Session.swift */,
+				4D8D24FE1CFC3488007C828E /* Movie.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -259,6 +287,7 @@
 				4DD1C63F1CEB22580028AE27 /* Frameworks */,
 				4DD1C6401CEB22580028AE27 /* Resources */,
 				4D7E7D261CEEC2BE00BA9028 /* ShellScript */,
+				4D7E7D381CEF1DB700BA9028 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -387,6 +416,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			outputPaths = (
 			);
@@ -401,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D8D24FF1CFC3488007C828E /* Movie.swift in Sources */,
 				4DF8F3F71CED8E9800B83898 /* DetailPageController.swift in Sources */,
 				4DD1C67C1CEB291F0028AE27 /* MovieListController.swift in Sources */,
 				4DD1C6831CEB29690028AE27 /* Inspiration.swift in Sources */,
@@ -504,7 +536,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -543,7 +575,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
