@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l9d-qW-EZf">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
@@ -131,18 +130,10 @@
             </objects>
             <point key="canvasLocation" x="2208" y="222"/>
         </scene>
-        <!--Detail Page Controller-->
-        <scene sceneID="Ual-wI-5KM">
-            <objects>
-                <pageViewController storyboardIdentifier="DetailPageController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="10" navigationOrientation="horizontal" spineLocation="min" id="9Pu-Ie-pRe" customClass="DetailPageController" customModule="Inmovi" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cVd-vW-AV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2840" y="47"/>
-        </scene>
         <!--Movie Detail Controller-->
         <scene sceneID="hwa-ns-Fxe">
             <objects>
-                <viewController id="sgX-jy-dj3" customClass="MovieDetailController" customModule="Inmovi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetailController" id="sgX-jy-dj3" customClass="MovieDetailController" customModule="Inmovi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="20J-pe-zEY"/>
                         <viewControllerLayoutGuide type="bottom" id="42z-uk-iEK"/>
@@ -150,12 +141,38 @@
                     <view key="view" contentMode="scaleToFill" id="Vmb-9J-QY3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Trs-aD-uBG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.1099566473" green="0.95926639619999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="NHr-ho-j9g"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5E-UB-YbP">
+                                <rect key="frame" x="20" y="230" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Trs-aD-uBG" firstAttribute="leading" secondItem="Vmb-9J-QY3" secondAttribute="leading" id="82w-Cx-tw3"/>
+                            <constraint firstItem="Trs-aD-uBG" firstAttribute="top" secondItem="Vmb-9J-QY3" secondAttribute="top" id="Dv6-4N-ESX"/>
+                            <constraint firstItem="A5E-UB-YbP" firstAttribute="leading" secondItem="Vmb-9J-QY3" secondAttribute="leading" constant="20" id="KL8-NU-Psh"/>
+                            <constraint firstAttribute="trailing" secondItem="Trs-aD-uBG" secondAttribute="trailing" id="TX6-6s-kFX"/>
+                            <constraint firstItem="A5E-UB-YbP" firstAttribute="top" secondItem="Trs-aD-uBG" secondAttribute="bottom" constant="30" id="lDh-wS-mRH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="headerImageView" destination="Trs-aD-uBG" id="aPq-yv-dIO"/>
+                        <outlet property="titleLabel" destination="A5E-UB-YbP" id="d8w-PS-0Nm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnb-aC-RU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2792" y="725"/>
+            <point key="canvasLocation" x="2892" y="222"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Po-ms-3Hx">

@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import RealmSwift
 
 private let reuseIdentifier = "MovieCell"
 
@@ -16,6 +17,8 @@ class MovieListController: UICollectionViewController, UIGestureRecognizerDelega
 
     let inspirations = Inspiration.allInspirations()
     let colors = UIColor.palette()
+    var movies = [Movie]()
+    
     
     let transitionDelegate: TransitioningDelegate = TransitioningDelegate()
 
@@ -38,6 +41,8 @@ class MovieListController: UICollectionViewController, UIGestureRecognizerDelega
                         let json = JSON(value)
                         print("JSON: \(json)")
                         
+                        let realm = try! Realm()
+                        
                         for (index,movieDatum):(String,JSON) in json {
                             print(index)
                             
@@ -50,7 +55,17 @@ class MovieListController: UICollectionViewController, UIGestureRecognizerDelega
                             movie.imageURL = movieDatum["image"].string
                             movie.createdDate = movieDatum["createdAt"].string
                             movie.updatedDate = movieDatum["updatedAt"].string
+                            self.movies.append(movie)
+                            
+                            // Load all image prematurely, save in cache
+                            Alamofire.request(.GET, movie.imageURL!)
+                            
+                            try! realm.write {
+                                realm.add(movie)
+                            }
                         }
+                        
+                        self.collectionView?.reloadData()
                     }
                 case .Failure(let error):
                     print(error)
@@ -83,20 +98,22 @@ extension MovieListController {
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return inspirations.count
+        return movies.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MovieCell
         
-        cell.inspiration = inspirations[indexPath.item]
+        cell.movie = movies[indexPath.item]
         
         return cell
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let detailVC = storyboard?.instantiateViewControllerWithIdentifier("DetailContainerController")
-        navigationController!.pushViewController(detailVC!, animated: true)
+        let detailVC = storyboard?.instantiateViewControllerWithIdentifier("DetailContainerController") as! DetailContainerController
+        detailVC.movies = self.movies
+        detailVC.currentPageIndex = indexPath.row
+        navigationController!.pushViewController(detailVC, animated: true)
     }
 }
 

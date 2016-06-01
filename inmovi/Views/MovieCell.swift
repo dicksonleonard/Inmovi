@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class MovieCell: UICollectionViewCell {
     
@@ -22,6 +24,30 @@ class MovieCell: UICollectionViewCell {
                 imageView.image = inspiration.backgroundImage
                 titleLabel.text = inspiration.title
                 subtitleLabel.text = inspiration.speaker
+            }
+        }
+    }
+    
+    var movie: Movie? {
+        didSet {
+            if let movie = movie {
+                titleLabel.text = movie.title
+                subtitleLabel.text = "huahaha"
+                imageView.image = UIImage(named: "Inspiration-01")
+                
+                Alamofire.request(.GET, movie.imageURL!).responseImage { response in
+                    debugPrint(response)
+                    
+                    print(response.request)
+                    print(response.response)
+                    debugPrint(response.result)
+                    
+                    if let image = response.result.value {
+                        print("image downloaded: \(image)")
+                        self.imageView.image = image
+                    }
+
+                }
             }
         }
     }
