@@ -1,11 +1,10 @@
 machine:
   xcode:
-    version: "7.3.1"
+    version: "7.3"
 
 dependencies:
-  cache_directories:
   pre:
     - brew update
     - brew upgrade
     - brew install carthage
-    - carthage bootstrap --no-use-binaries
+    - carthage bootstrap --no-use-binaries --use-ssh
