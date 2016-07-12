@@ -33,6 +33,19 @@ class MovieListController: UICollectionViewController, UIGestureRecognizerDelega
         edgesForExtendedLayout = .None
         collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
 
+        Alamofire.request(.GET, "http://eagl.herokuapp.com/playingat/ambon", parameters:nil)
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    if let value = response.result.value {
+                        let json = JSON(value)
+                        print("JSON: \(json)")
+                    }
+                case .Failure(let error):
+                    print(error)
+                }
+        }
+        
         Alamofire.request(.GET, "http://eagl.herokuapp.com/movie/json", parameters:nil)
             .responseJSON { response in
                 switch response.result {
