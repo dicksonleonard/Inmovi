@@ -4,13 +4,7 @@ machine:
 
 dependencies:
   cache_directories:
-    - certificates
-    - profiles
   pre:
-    - sudo gem install cert
-    - cert --development --output_path certificates
-    - sudo gem install sigh
-    - sigh --development --output_path profiles
     - brew update
     - brew upgrade
     - brew install carthage
