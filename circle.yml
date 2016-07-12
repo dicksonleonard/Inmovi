@@ -6,5 +6,5 @@ dependencies:
   pre:
     - brew update
     - brew upgrade
-    - brew install carthage
-    - carthage bootstrap
+  override:
+    - carthage bootstrap --no-use-binaries --use-ssh
