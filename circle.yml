@@ -7,4 +7,4 @@ dependencies:
     - brew update
     - brew upgrade
     - brew install carthage
-    - carthage bootstrap --no-use-binaries --use-ssh
+    - carthage update --no-use-binaries --use-ssh
