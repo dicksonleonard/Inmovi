@@ -138,11 +138,11 @@
 		4DD1C6391CEB22580028AE27 = {
 			isa = PBXGroup;
 			children = (
-				4D9A0EC51CFD5200007167BC /* AlamofireImage.framework */,
 				4DD1C6441CEB22580028AE27 /* Inmovi */,
 				4DD1C6591CEB22590028AE27 /* InmoviTests */,
 				4DD1C6641CEB22590028AE27 /* InmoviUITests */,
 				4DD1C6431CEB22580028AE27 /* Products */,
+				4D9A0EC51CFD5200007167BC /* AlamofireImage.framework */,
 				4D7E7D321CEF1DB700BA9028 /* Realm.framework */,
 				4D7E7D331CEF1DB700BA9028 /* RealmSwift.framework */,
 				4D7E7D2C1CEF1D6C00BA9028 /* Alamofire.framework */,
