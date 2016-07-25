@@ -287,8 +287,8 @@
 				4DD1C63E1CEB22580028AE27 /* Sources */,
 				4DD1C63F1CEB22580028AE27 /* Frameworks */,
 				4DD1C6401CEB22580028AE27 /* Resources */,
-				4D7E7D261CEEC2BE00BA9028 /* ShellScript */,
 				4D7E7D381CEF1DB700BA9028 /* Embed Frameworks */,
+				4D7E7D261CEEC2BE00BA9028 /* ShellScript */,
 			);
 			buildRules = (
 			);
